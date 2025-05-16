@@ -1,0 +1,58 @@
+/* General styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure full height */
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 200vh; /* Make the page longer to allow scrolling */
+  background: linear-gradient(90deg, #074750, #7a1632, #094e39, #4f3254, #074750);
+  background-size: 400% 400%; /* Smooth animation */
+  animation: pulse 50s infinite; /* Background animation */
+}
+
+/* "Pornoise" and input box */
+.footer-like {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 72px; /* 4x larger font size */
+  font-weight: bold;
+  color: black;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  background: transparent; /* Remove background */
+}
+
+.footer-like input {
+  margin-left: 20px;
+  padding: 20px; /* Make input box larger */
+  border-radius: 10px;
+  border: 2px solid #7a1632; /* Desaturated burgundy border */
+  background-color: #7a1632; /* Desaturated burgundy background */
+  color: white;
+  font-size: 36px; /* Larger input text */
+}
+
+.footer-like input::placeholder {
+  color: #f5f5f5; /* Lighter placeholder color */
+}
+
+@keyframes pulse {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
